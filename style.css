@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Noto+Sans+TC:wght@100&family=Outfit:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 學到新的定義色彩的方法，用於顏色比較多的地方。 */
+:root{
+--White: hsl(0, 0%, 100%);
+--Ligh-gray: hsl(212, 45%, 89%);
+--Grayish-blue: hsl(220, 15%, 55%);
+--Dark-blue: hsl(218, 44%, 22%)
+}
+
+
+
+body{
+  /* 跟guide的設置 */
+font-family: 'Outfit' sans-serif;
+font-size: 15px;
+
+/* 整個body的背景顏色 */
+background-color: var(--Ligh-gray);
+
+/* 將畫面上所有內容放在中間，上下排列，用flex */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: calc(100vh - 1px);
+margin:1.25rem;
+}
+
+.container{
+  background-color:var(--White);
+  /* padding向內 */
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+  /*  x 偏移量 | y 偏移量 | 陰影模糊半徑 | 陰影顏色 */
+/* box-shadow: 10px 5px 5px black; */ 
+margin-bottom: 2rem;
+}
+
+img{
+  border-radius: 0.625rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+/* maxwidth100% 可以適應到包住他的元素的大小 */
+
+h1{
+  color: var(--Dark-blue);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+color: var(--Grayish-blue);
+text-align: center;
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* 當屏幕放大大於500px的時候，我們的container是400px不變。 */
+@media (min-width:500px) {
+  .container{
+    width: 400px;
+  }
+}
